@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE_NAME = 'Project_Image'
-        GITHUB_REPO_URL = 'https://github.com/Pracheti/SPE_MiniProject.git'
+        DOCKER_IMAGE_NAME = 'project_image'
+        GITHUB_REPO_URL = 'https://github.com/Pracheti/MiniProject_SPE.git'
     }
 
     stages {
@@ -27,8 +27,8 @@ pipeline {
             steps {
                 script{
                     docker.withRegistry('', 'DockerId') {
-                    sh 'docker tag Project_Image pracheti/Project_Image:latest'
-                    sh 'docker push pracheti/Project_Image'
+                    sh 'docker tag project_image pracheti/project_image:latest'
+                    sh 'docker push pracheti/project_image'
                     }
                  }
             }

@@ -15,9 +15,18 @@ pipeline {
                 }
             }
         }
+    stage('Maven Build') {
+         steps {
+             script{
+                  sh 'mvn clean install'
+             }
+         }
+    }
    	stage('Build Docker Image') {
             steps {
                 script {
+                    // Remove the container if it already exists
+                    sh 'docker rm -f Container_Project || true'
                     // Build Docker image
                     docker.build("${DOCKER_IMAGE_NAME}", '.')
                 }

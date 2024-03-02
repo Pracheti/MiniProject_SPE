@@ -6,10 +6,10 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Scientific Calculator Menu:");
-        System.out.println("1. Square root function (√x)");
-        System.out.println("2. Factorial function (x!)");
-        System.out.println("3. Natural logarithm (base e) - ln(x)");
-        System.out.println("4. Power function (x^b)");
+        System.out.println("1. Square root function");
+        System.out.println("2. Factorial function");
+        System.out.println("3. Natural logarithm");
+        System.out.println("4. Power function");
 
         System.out.print("Enter your choice (1-4): ");
         int choice = scanner.nextInt();

@@ -12,6 +12,7 @@ public class Calculator {
         System.out.println("4. Power function");
 
         System.out.print("Enter your choice (1-4): ");
+        System.out.print("Updated");
         int choice = scanner.nextInt();
 
         switch (choice) {
